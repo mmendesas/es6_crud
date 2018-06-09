@@ -7,8 +7,11 @@
     "jasmine": "^3.1.0",
     "walnutjs": "^1.0.48"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "serve": "^8.1.2"
+  },
   "scripts": {
+    "start": "serve -l 5555",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
