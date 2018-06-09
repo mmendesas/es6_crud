@@ -126,7 +126,7 @@ class UserApp {
         document.querySelector("#register-page").classList.toggle('hide');
         document.querySelector("#list-page").classList.toggle('hide');
 
-        document.querySelector("#changeView").textContent = this.firstPage ? 'Voltar' : 'Ver Lista';        
+        document.querySelector("#changeView").textContent = this.firstPage ? 'Novo Usuario' : 'Ver Lista';
         this.firstPage = !this.firstPage;
     }
 }

@@ -120,7 +120,8 @@ section > table {
         }
 
 #changeView {
-    background:black;
+    background:rgb(2, 110, 105);
+    width: 150px;
 }
 
 /* mobile */
