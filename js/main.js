@@ -51,6 +51,10 @@ class UserApp {
         customBTN.setAttribute("class", mclass);
         customBTN.textContent = mtext;
 
+        // I know there must be a better implementation than that.
+        let calledMethod = (mclass === "edit") ? (event) => this.editUser(event) : (event) => this.deleteUser(event);
+        customBTN.addEventListener('click', calledMethod);
+
         return customBTN;
     }
 
@@ -85,6 +89,34 @@ class UserApp {
                 inputs[i].classList.add('error');
             }
         }
+    }
+
+    deleteUser(event) {
+        let currentLine = event.target.parentNode.parentNode;
+        let idx = currentLine.rowIndex - 1;
+
+        // remove line from view
+        currentLine.classList.add("fadeOut");
+        setTimeout(() => currentLine.remove(), 500);
+
+        // update the list
+        this.userList.splice(idx, 1);
+        localStorage.setItem("user-list", JSON.stringify(this.userList));
+    }
+
+    editUser(event) {
+        let currentLine = event.target.parentNode.parentNode;
+        let idx = currentLine.rowIndex - 1;
+        let userToEdit = this.userList[idx];
+
+        setTimeout(() => {
+            this.form.name.value = userToEdit.name;
+            this.form.email.value = userToEdit.email;
+            this.form.phone.value = userToEdit.phone;
+            this.form.cpf.value = userToEdit.cpf;
+
+            this.deleteUser(event);
+        }, 500);
     }
 }
 
