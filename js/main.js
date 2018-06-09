@@ -55,6 +55,9 @@ class UserApp {
     }
 
     saveUser() {
+
+        this.checkFields();
+
         if (this.form.checkValidity()) {
             var user = {
                 name: this.form.name.value,
@@ -65,6 +68,22 @@ class UserApp {
 
             this.userList.push(user);
             localStorage.setItem("user-list", JSON.stringify(this.userList));
+        }
+    }
+
+    checkFields() {
+        let msgs = document.querySelectorAll(".msg");
+        let inputs = document.querySelectorAll(".row > input")
+
+        for (let i = 0; i < 4; i += 1) {
+            // reset error messages
+            msgs[i].classList.add('hide');
+            inputs[i].classList.remove('error');
+
+            if (inputs[i].value.length < 3) {
+                msgs[i].classList.remove('hide');
+                inputs[i].classList.add('error');
+            }
         }
     }
 }
