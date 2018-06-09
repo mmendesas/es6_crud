@@ -1,0 +1,133 @@
+.content {
+    max-width: 70%;
+    margin: auto;
+
+    border-radius: 5%;
+    padding: 40px;
+}
+
+header {
+    text-align: center;
+    color:#4CAF50;
+    font-weight: bold;
+}
+
+/* form */
+section > form {
+    width: 600px;
+    margin: auto;
+}
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        color: #efeeed;
+    }
+
+    label:hover {
+        color: #333333;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 0px;
+        border: 1px solid transparent;
+        border-bottom: 1px solid #efeeed;
+        border-radius: 4px;
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        margin-top: 50px;
+        margin-left: 20%;
+        cursor: pointer;
+        width: 60%;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    input[class="error"] { 
+        border-bottom: 1px solid #eb4a46;
+    }
+
+    /* error msg */
+    div[class="row"] > span {
+        color: #eb4a46;
+        margin-top: 5px;
+    }
+
+
+
+/* table section */
+section > table {
+    max-width: 750px;
+    margin: auto;
+}
+
+    button {
+        color:white;
+        border:none;
+        border-radius: 20px;
+        cursor: pointer;
+        padding: 5px;
+        width: 100%;
+        opacity: 0.8;
+        font-weight: bold;
+        margin:0px 5px;
+    }
+
+    .edit { background: blue;}
+    .delete { background: red;}
+
+    /* TABLE Style */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+        th, td {
+            text-align: center;
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even){ background-color: #f2f2f2 }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td:last-child {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+/* mobile */
+@media screen and (max-width: 600px) {
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .content {
+        min-width: 400px;
+    }
+}
+
+/* UTILS */
+.hide {
+    display: none;
+}
+.separator {
+    color: #4CAF50;
+    margin: 50px 0px;
+    width: 80%;
+    margin-left: 10%;
+}

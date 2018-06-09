@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Easynvest Test</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="content">
+        <header>
+            <h1>Easynvest Test</h1>
+        </header>
+
+        <main class="main">
+            <section>
+                <form action="" id="mainForm">
+                    <div class="row">
+                        <label for="name">Nome completo [sem abreviações]</label>
+                        <input type="text" id="name" required>
+                        <span class="msg hide">Campo deve conter 3 caracteres ou mais</span>
+                    </div>
+                    <div class="row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                        <span class="msg hide">Campo deve conter 3 caracteres ou mais</span>
+                    </div>
+                    <div class="row">
+                        <label for="cpf">CPF</label>
+                        <input type="number" id="cpf" required>
+                        <span class="msg hide">Campo deve conter 3 caracteres ou mais</span>
+                    </div>
+                    <div class="row">
+                        <label for="phone">Telefone</label>
+                        <input type="number" id="phone" required>
+                        <span class="msg hide">Campo deve conter 3 caracteres ou mais</span>
+                    </div>
+
+                    <input type="submit" id="saveUser" value="Cadastrar">
+                </form>
+            </section>
+            <hr class="separator">
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Email</th>
+                            <th>CPF</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userList">
+                        <!-- user -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
