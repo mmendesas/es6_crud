@@ -1,0 +1,28 @@
+{
+  "name": "es6_crud",
+  "version": "1.0.0",
+  "description": "es6 crud without framework",
+  "main": "index.js",
+  "dependencies": {
+    "jasmine": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmendesas/es6_crud.git"
+  },
+  "keywords": [
+    "es6",
+    "crud",
+    "e2etest"
+  ],
+  "author": "Marcio Mendes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmendesas/es6_crud/issues"
+  },
+  "homepage": "https://github.com/mmendesas/es6_crud#readme"
+}
