@@ -14,11 +14,15 @@
 
     <div class="content">
         <header>
-            <h1>Easynvest Test</h1>
+            <h1>Easynvest Test - ES6 CRUD</h1>
         </header>
-
+        <hr class="separator">
         <main class="main">
-            <section>
+            <section id="register-page">
+                <legend>
+                    <h1>Cadastro de Usuários</h1>
+                </legend>
+
                 <form action="" id="mainForm">
                     <div class="row">
                         <label for="name">Nome completo [sem abreviações]</label>
@@ -44,8 +48,12 @@
                     <input type="submit" id="saveUser" value="Cadastrar">
                 </form>
             </section>
-            <hr class="separator">
-            <section>
+
+            <section id="list-page" class="hide">
+                <legend>
+                    <h1>Lista de Usuários</h1>
+                </legend>
+
                 <table>
                     <thead>
                         <tr>
@@ -61,6 +69,9 @@
                     </tbody>
                 </table>
             </section>
+
+            <hr class="separator">
+            <button id="changeView" style="width: 100px">Ver Lista</button>
         </main>
     </div>
 

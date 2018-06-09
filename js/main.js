@@ -4,6 +4,7 @@ class UserApp {
 
         // main user list
         this.userList = [];
+        this.firstPage = true;
 
         // dom elements
         this.userTable = document.getElementById('userList');
@@ -14,6 +15,7 @@ class UserApp {
 
         // click listener
         document.querySelector('#saveUser').addEventListener('click', () => this.saveUser());
+        document.querySelector('#changeView').addEventListener('click', () => this.changeView());
     }
 
     loadUsers() {
@@ -116,7 +118,16 @@ class UserApp {
             this.form.cpf.value = userToEdit.cpf;
 
             this.deleteUser(event);
+            this.changeView();
         }, 500);
+    }
+
+    changeView() {
+        document.querySelector("#register-page").classList.toggle('hide');
+        document.querySelector("#list-page").classList.toggle('hide');
+
+        document.querySelector("#changeView").textContent = this.firstPage ? 'Voltar' : 'Ver Lista';        
+        this.firstPage = !this.firstPage;
     }
 }
 

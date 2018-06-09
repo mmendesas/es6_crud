@@ -1,5 +1,6 @@
 .content {
-    max-width: 70%;
+    width: 70%;
+    max-width: 750px;
     margin: auto;
 
     border-radius: 5%;
@@ -10,6 +11,16 @@ header {
     text-align: center;
     color:#4CAF50;
     font-weight: bold;
+    background-color: #f0f0f0;
+    height: 5em;
+    padding: 1em;
+    border-radius: 100px;
+}
+
+legend {
+    color: #45a049;
+    text-align: center;
+    font-size: 24px;
 }
 
 /* form */
@@ -108,6 +119,9 @@ section > table {
             justify-content: space-between;
         }
 
+#changeView {
+    background:black;
+}
 
 /* mobile */
 @media screen and (max-width: 600px) {
