@@ -4,7 +4,8 @@
   "description": "es6 crud without framework",
   "main": "index.js",
   "dependencies": {
-    "jasmine": "^3.1.0"
+    "jasmine": "^3.1.0",
+    "walnutjs": "^1.0.48"
   },
   "devDependencies": {},
   "scripts": {

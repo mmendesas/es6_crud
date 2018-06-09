@@ -1,0 +1,19 @@
+[
+  {
+    "description": "I want see the Google Page",
+    "assertions": [
+      {
+        "passed": true
+      },
+      {
+        "passed": true
+      },
+      {
+        "passed": false,
+        "errorMsg": "Unable to find element in page. Binding [container, key] : [\"GoogleResult\",\"SiteLink\"]",
+        "stackTrace": "Error: Unable to find element in page. Binding [container, key] : [\"GoogleResult\",\"SiteLink\"]\n    at Timeout.handleErrorCallback [as _onTimeout] (/home/mmendesas/Documents/test/es6_crud/node_modules/walnutjs/src/support/world.js:61:30)\n    at ontimeout (timers.js:482:11)\n    at tryOnTimeout (timers.js:317:5)\n    at Timer.listOnTimeout (timers.js:277:5)"
+      }
+    ],
+    "duration": null
+  }
+]
