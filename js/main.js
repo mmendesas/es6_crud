@@ -8,9 +8,12 @@ class UserApp {
         // dom elements
         this.userTable = document.getElementById('userList');
         this.form = document.querySelector("#mainForm");
-        
+
         // loads all users.
         this.loadUsers();
+
+        // click listener
+        document.querySelector('#saveUser').addEventListener('click', () => this.saveUser());
     }
 
     loadUsers() {
@@ -18,6 +21,7 @@ class UserApp {
             // display users from current user-list
             this.userList = JSON.parse(localStorage['user-list']);
             this.userList.map(item => this.displayUser(item));
+
         } else {
             // get info from apiary in the first load
             fetch("https://private-21e8de-rafaellucio.apiary-mock.com/users")
@@ -48,6 +52,20 @@ class UserApp {
         customBTN.textContent = mtext;
 
         return customBTN;
+    }
+
+    saveUser() {
+        if (this.form.checkValidity()) {
+            var user = {
+                name: this.form.name.value,
+                phone: this.form.phone.value,
+                email: this.form.email.value,
+                cpf: this.form.cpf.value
+            }
+
+            this.userList.push(user);
+            localStorage.setItem("user-list", JSON.stringify(this.userList));
+        }
     }
 }
 
