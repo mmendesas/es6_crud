@@ -123,13 +123,12 @@ class UserApp {
     }
 
     changeView() {
-        document.querySelector("#register-page").classList.toggle('hide');
-        document.querySelector("#list-page").classList.toggle('hide');
+        document.querySelector("#register-page").classList.toggle("hide");
+        document.querySelector("#list-page").classList.toggle("hide");
 
         document.querySelector("#changeView").textContent = this.firstPage ? 'Novo Usuario' : 'Ver Lista';
         this.firstPage = !this.firstPage;
     }
 }
 
-// On load start the app.
-window.addEventListener('load', () => new UserApp());
+export default UserApp;
