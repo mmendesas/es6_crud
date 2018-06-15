@@ -1,13 +1,22 @@
 {
-    "presets": [
-        [
-            "@babel/env",
-            {
-                "modules": false
-            }
-        ]
-    ],
-    "plugins": [
-        "syntax-dynamic-import"
-    ]
+    "env": {
+        "production": {
+            "presets": [
+                [
+                    "@babel/env",
+                    {
+                        "modules": false
+                    }
+                ]
+            ],
+            "plugins": [
+                "syntax-dynamic-import"
+            ]
+        },
+        "test": {
+            "presets": [
+                "es2015"
+            ]
+        }
+    }
 }

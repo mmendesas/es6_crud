@@ -22,6 +22,7 @@ class UserApp {
         if (localStorage['user-list']) {
             // display users from current user-list
             this.userList = JSON.parse(localStorage['user-list']);
+            console.log(this.userList);
             this.userList.map(item => this.displayUser(item));
 
         } else {
@@ -123,8 +124,17 @@ class UserApp {
     }
 
     changeView() {
-        document.querySelector("#register-page").classList.toggle("hide");
-        document.querySelector("#list-page").classList.toggle("hide");
+        let page01 = document.querySelector("#register-page");
+        let page02 = document.querySelector("#list-page");
+
+        if (!this.firstPage) {
+            page01.classList.remove("hide");
+            page02.classList.add("hide");
+
+        } else {
+            page01.classList.add("hide");
+            page02.classList.remove("hide");
+        }
 
         document.querySelector("#changeView").textContent = this.firstPage ? 'Novo Usuario' : 'Ver Lista';
         this.firstPage = !this.firstPage;
