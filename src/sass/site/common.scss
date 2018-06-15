@@ -1,0 +1,40 @@
+.content {
+    width: 70%;
+    max-width: 750px;
+    margin: auto;
+
+    border-radius: 5%;
+    padding: 40px;
+}
+
+header {
+    text-align: center;
+    color:#4CAF50;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    height: 5em;
+    padding: 1em;
+    border-radius: 100px;
+}
+
+legend {
+    color: #45a049;
+    text-align: center;
+    font-size: 24px;
+}
+
+#changeView {
+    background:rgb(2, 110, 105);
+    width: 150px;
+}
+
+/* UTILS */
+.hide {
+    display: none;
+}
+.separator {
+    color: #4CAF50;
+    margin: 50px 0px;
+    width: 80%;
+    margin-left: 10%;
+}

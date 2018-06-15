@@ -1,0 +1,50 @@
+
+/* form */
+section > form {
+    width: 600px;
+    margin: auto;
+}
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        color: black;
+    }
+
+    label:hover {
+        color: #333333;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 0px;
+        border: 1px solid transparent;
+        border-bottom: 1px solid #efeeed;
+        border-radius: 4px;
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        margin-top: 50px;
+        margin-left: 20%;
+        cursor: pointer;
+        width: 60%;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    input[class="error"] { 
+        border-bottom: 1px solid #eb4a46;
+    }
+
+    /* error msg */
+    div[class="row"] > span {
+        color: #eb4a46;
+        margin-top: 5px;
+    }

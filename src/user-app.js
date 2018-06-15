@@ -1,9 +1,11 @@
+import UserList from './user-list';
+
 class UserApp {
 
     constructor() {
 
         // main user list
-        this.userList = [];
+        this.userList = new UserList([]);
         this.firstPage = true;
 
         // dom elements
@@ -21,16 +23,14 @@ class UserApp {
     loadUsers() {
         if (localStorage['user-list']) {
             // display users from current user-list
-            this.userList = JSON.parse(localStorage['user-list']);
-            console.log(this.userList);
-            this.userList.map(item => this.displayUser(item));
-
+            this.userList.setUserList(JSON.parse(localStorage['user-list']));
+            this.userList.getAllUsers().map(item => this.displayUser(item));
         } else {
             // get info from apiary in the first load
             fetch("https://private-21e8de-rafaellucio.apiary-mock.com/users")
                 .then(response => response.json())
                 .then(list => {
-                    localStorage.setItem("user-list", JSON.stringify(list));
+                    this.updateLocalStorage(list);
                     this.loadUsers();
                 });
         }
@@ -73,8 +73,8 @@ class UserApp {
                 cpf: this.form.cpf.value
             }
 
-            this.userList.push(user);
-            localStorage.setItem("user-list", JSON.stringify(this.userList));
+            this.userList.addUser(user);
+            this.updateLocalStorage(this.userList.getAllUsers());
         }
     }
 
@@ -103,8 +103,8 @@ class UserApp {
         setTimeout(() => currentLine.remove(), 500);
 
         // update the list
-        this.userList.splice(idx, 1);
-        localStorage.setItem("user-list", JSON.stringify(this.userList));
+        this.userList.deleteUser(idx);
+        this.updateLocalStorage(this.userList.getAllUsers())
     }
 
     editUser(event) {
@@ -138,6 +138,10 @@ class UserApp {
 
         document.querySelector("#changeView").textContent = this.firstPage ? 'Novo Usuario' : 'Ver Lista';
         this.firstPage = !this.firstPage;
+    }
+
+    updateLocalStorage(list) {
+        localStorage.setItem("user-list", JSON.stringify(list));
     }
 }
 
