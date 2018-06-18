@@ -19,14 +19,24 @@ cd es6-crud/
 npm install
 ```
 
-2 - Run this command to start the application and access http://localhost:5555
+2 - Run this command to start the application and access http://localhost:8080
 
 ```shell
-npm start
+npm run develop
 ```
 
-3 - Access http://localhost:5555 and enjoy
+3 - Access http://localhost:8080 and enjoy
 
+4 - Run the unit tests
+
+```shell
+npm run test
+```
+
+5 - Build the application and see /dist files
+```shell
+npm run build
+```
 
 ### Run the e2e tests
 
